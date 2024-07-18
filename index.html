@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 100vw;
+            max-height: 100vh;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cells {
+            width: 1%;
+            height: 1%;
+            border: 0.25px solid silver;
+        }
+
+        .black {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <div class="controls">
+        <button onclick="randomCell()">ランダムに塗る</button><br>
+        <button onclick="update()">一つ次</button><br>
+        <button onclick="autoUpdate(0)">再生（高速）</button><br>
+        <button onclick="autoUpdate()">再生（低速）</button><br>
+        <button onclick="autoUpdate('stop')">停止</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
